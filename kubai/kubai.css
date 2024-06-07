@@ -1,0 +1,85 @@
+body{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(140deg,
+                hsl(0deg 99% 40%) 0%,
+                hsl(21deg 100% 44%) 12%,
+                hsl(32deg 100% 46%) 24%,
+                hsl(42deg 100% 47%) 35%,
+                hsl(53deg 100% 47%) 45%,
+                hsl(65deg 100% 50%) 55%,
+                hsl(71deg 100% 49%) 64%,
+                hsl(77deg 100% 48%) 73%,
+                hsl(84deg 100% 48%) 82%,
+                hsl(92deg 100% 47%) 90%,
+                hsl(109deg 87% 49%) 100%
+            );
+            background-size: 200%;
+            overflow: hidden;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            animation: color 10s infinite alternate linear;
+}
+
+@keyframes color {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 50% 100%;
+    }
+
+    100% {
+        background-position: 100% 0%;
+    }
+}
+
+.cube {
+    position:absolute;
+    top: 80%;
+    left:45%;
+    width: 10px;
+    height: 10px;
+    border: 1px solid #000;
+    animation: cube 7s infinite alternate linear;
+    opacity: 0;
+}
+
+.cube:nth-child(2){
+animation-delay: 1s;
+left:80%;
+top:40%;
+}
+.cube:nth-child(3) {
+animation-delay: 3s;
+left: 60%;
+top: 30%;
+}
+.cube:nth-child(4) {
+animation-delay: 5s;
+left: 10%;
+top: 60%;
+}
+.cube:nth-child(5) {
+animation-delay: 7s;
+right: 80%;
+top: 40%;
+}
+.cube:nth-child(6) {
+animation-delay: 9s;
+left: 10%;
+top: 10%;
+}
+
+@keyframes cube {
+    from {
+        transform: scale(0) rotate(0);
+        opacity: 1;
+    }
+    to {
+        transform: scale(20) rotate(960deg);
+        opacity: 0;
+    }
+}
